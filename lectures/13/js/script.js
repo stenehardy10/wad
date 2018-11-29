@@ -28,15 +28,30 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
+	 document.getElementById("question").innerHTML=questions[currentQuestion].question+questions[currentQuestion].choices;
+	 currentQuestion++;
 }
 
 function displayCurrentQuestion() {
-    /*Write your code here */
+   
+   var id=document.getElementById("question").innerHTML=questions[currentQuestion].question;
+   id.innerHTML='<p>'+questions[currentQuestion].question+'<p>';
+   var choiceListId=document.getElementById("choice-list");
+   for(var x=0; x<questions[currentQuestion].choices.length;x++)
+   {
+   choiceListId.innerHTML += '<li>' +'<input type ="radio" name="ch">' + questions[currentQuestion].choices[x] +'</li>';
+   }
+   currentQuestion++;
+   
+   
+   
 }
 
 function resetQuiz() {
     currentQuestion = 0;
     correctAnswers = 0;
+	displayCurrentQuestion();
+	
     hideScore();
 }
 function displayScore() {
