@@ -47,7 +47,18 @@ input[type=radio]{
     border-radius: 8px;
     color: white;
     padding: 10px;
+	
 }
+
+#tryagain-btn {
+    text-align: center;
+    background-color: #805724;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+	}
 
 
 #quiz-message {
